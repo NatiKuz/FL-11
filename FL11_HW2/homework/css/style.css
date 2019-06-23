@@ -1,0 +1,261 @@
+@media print { 
+
+    .tm-sidebar, #about, .tm-team-img, .gallery-container, .carousel-indicators, #contact, .img-contact-us {
+        display: none;
+    }
+
+    body {
+        background-color: transparent;
+    }
+
+    .tm-main-content, .tm-content-box, .padding-medium, #tmCarousel {
+        padding: 0;
+        margin: 0;
+    }
+
+    div.tm-banner {
+        padding-top: 0;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    #home {
+        width: 100%;
+    }
+
+    div.tm-team-description-container {
+        max-width: 100%;
+    }
+
+    .tm-main-content:not(#home) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    p, h2 {
+        text-align: center;
+    }
+
+    h2.tm-section-title, .padding-medium > h2 {
+        color: lightskyblue;
+        font-weight: bolder;
+        text-transform: uppercase;
+    }
+
+    ol {
+        list-style: none;
+    }
+    
+    ol > li > a {
+        color: black;
+        text-decoration: none; 
+    }
+
+    section.heading.tm-content-box {
+        width: 40%;
+    }
+
+    ol {
+        padding: 0;
+    }
+
+    li a {
+        display: block;
+    }
+
+    li a:first-letter {          
+        font-size: 24px;
+        color: lightseagreen;
+    }
+
+    .heading li:nth-child(odd) { 
+        text-align: left;
+    } 
+
+    .heading li:nth-child(even) {  
+        text-align: right;
+    }
+}
+
+@media screen {
+        
+    .flex-2-col{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    section > div div {
+        flex: 1;
+    }
+
+    .tm-team-description-container {
+        flex: 2;
+        max-width: none;
+    }
+
+    /* Task 2 */
+    .box-bg:hover {
+        background-color: lightskyblue;
+    }
+
+    li > h2:hover {
+        color: white;
+    }
+
+    /* Task 3 */
+    .tm-sidebar, #home, section {
+        box-shadow: 0px 0px 10px 0px rgba(61, 55, 61, 0.7);
+    }
+
+    .tm-banner {
+        background-color: #76cdd7;
+    }
+
+    .tm-banner-inner {
+        background-color: white;
+    }
+
+    .tm-banner-text {
+        text-shadow: 0px 3px 1px #76cdd7, 0px 9px 1px rgba(118,205,215,0.3);
+        word-spacing: 10px;
+        letter-spacing: 3px;
+    }
+
+    /* Task 4 */
+    section::before {
+        content: "";
+        border-style: solid;
+        border-width: 40px 40px 0 0;
+        border-color: lightskyblue transparent;
+    }
+
+    /* Task 5 */
+    .heading > .padding-medium > h2 {
+        color: #76cdd7;
+        text-align: center;
+    }
+
+    ol {
+        list-style: lower-roman;
+    }
+
+    ol > li > a:link {
+        color: black;
+        text-decoration: none;
+    }
+
+    ol > li > a:visited {
+        color: #ffb347;
+    }
+
+    ol > li > a:hover {
+        color: #ffb347;
+        font-weight: bold;
+        border-left: 3px solid#ffb347;
+        padding-left: 1px;
+    }
+
+    .text::after {
+        display: inline-block;
+        color: red;
+        font-size: 10px;
+        font-weight: bold;
+        font-variant: small-caps;
+        content: "New";
+        vertical-align: top;
+    }
+
+    /* Task 6 */
+    .blocks .boxes .box {
+        padding: 5px;
+    }
+
+    .blocks .boxes .box:nth-child(even) {
+        background-color: rgb(243, 242, 242);
+    }
+
+    .blocks .boxes .box div p {
+        font-style: italic;
+    }
+
+    .blocks .boxes .box div p:first-letter {
+        color: black;
+        font-size: 30px;
+    }
+
+    /* Task 7 */
+    #contact_name, #contact_email, #contact_subject {
+        border-bottom: 2px solid lightskyblue;
+        border-top: inherit;
+        border-left: inherit;
+        border-right: inherit;
+        border-radius: 3px;
+    }
+
+    #contact_name:hover, #contact_email:hover, #contact_subject:hover {
+        background-color: #76cdd7;
+        color: white;
+        border: 2px solid lightskyblue;
+    }
+
+    .mandatory-field::after { 
+        content: ""; 
+        background-image: url(../img/email-icon.png);
+        background-repeat: no-repeat; 
+        background-size: 30px; 
+        background-position: right; 
+        top: 4px; 
+        width: 30px; 
+        height: 30px; 
+    }
+
+    #contact_message {
+        border: 2px solid lightskyblue;
+        border-radius: 3px;
+        resize: none;
+    }
+
+    button.btn.btn-primary.submit-btn {
+        float: right;
+        width: 150px;
+        height: 50px;
+        background-color: white;
+        font-weight: lighter;
+        color: lightskyblue;
+        border: 2px solid lightskyblue;
+        border-radius: 0;
+    }
+
+    button.btn.btn-primary.submit-btn:hover {
+        background-color: lightskyblue;
+        color: white;
+    }
+
+    /* Task 8 */
+    .tm-nav-item:hover {
+        background-color: rgb(243, 242, 242);
+    }
+
+    /* Task 9 */
+    h2 + p {
+        font-style: italic;
+    }
+
+    .tm-section-description {
+        line-height: 30px;
+        text-indent: 25px;
+    }
+
+    /* Task 10 */
+    .tm-banner-text {
+        transform: rotateY(180deg);
+        animation-delay: 2s;
+        animation: notransform 5s infinite;
+    }
+
+    @keyframes notransform {
+        50% {transform: none;}
+    }
+}
