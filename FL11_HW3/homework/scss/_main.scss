@@ -1,0 +1,237 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    margin: auto;
+    color: $mainFontColor;
+    background-color: $mainBackgroundColor;
+
+    @mixin buttonJoinUs {       
+        width: 150px;
+        height: 45px;
+        border-radius: 3px;
+        background-color: $bttnBckgrndClr;
+        border-color: $bttnBckgrndClr;
+        color: white;
+        font-size: 15px;
+        font-weight: bold;
+    }
+
+    @mixin logo {
+        display: flex;
+        img {
+            height: 50px;
+            width: 50px;
+        }
+
+        p {
+            margin-top: 0px;
+            margin-bottom: 0;
+            margin-left: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            font-size: 25px;
+            font-family: $paragraphFontFamily;
+
+            span {
+                font-size: 12px;
+                text-align: center;
+            }
+        }
+    }
+
+    $paddingLeftRight: ("min":10%);
+    $sectionHeight: ("maximum":100vh, "medium":95vh, "minimum":31vh);
+    
+    header {
+        background-image: $bckgrndImg;
+        background-size: cover;
+        background-position: center;
+        height: map-get($sectionHeight, "medium");
+        border-bottom-right-radius: 300px 200px;
+         
+        .header-wrap {
+            margin-left: 10%;
+            
+            .landing-logo {
+                padding-top: 15px;
+                @include logo;
+            }
+
+            .header_heading {
+                margin-bottom: 0;
+                width: 50%;
+                font-size: 70px;
+                font-weight: bold;
+                font-family: 'Source Sans Pro', sans-serif;
+                position: relative;
+                z-index: 1;
+
+                &::after {
+                    content: "";
+                    background-color: $underLineTextColor;
+                    display: block;
+                    height: 25px;
+                    width: 45%;
+                    z-index: -1;
+                    position: absolute;
+                    bottom: 0px;
+                }
+            }
+
+            .header_text {
+                white-space: pre-line;
+                margin-bottom: 50px;  
+                line-height: 140%; 
+                font-family: $paragraphFontFamily;            
+            }
+
+            .header_button {
+                @include buttonJoinUs;
+            } 
+        }
+    }
+
+    main {
+        padding-left: map-get($paddingLeftRight, "min");
+        padding-right: map-get($paddingLeftRight, "min");
+        height: map-get($sectionHeight, "maximum");
+        p.section_text {
+            text-align: center;
+            font-size: 40px;
+            position: relative;
+            z-index: 1;
+            font-family: 'Source Sans Pro', sans-serif;
+
+            &::after {
+                content: "";
+                background-color: $underLineTextColor;
+                display: block;
+                height: 15px;
+                width: 15%;
+                z-index: -1;
+                position: absolute;
+                bottom: 0px;
+                left: 51%;
+            }
+        }
+
+        .section_card_wrap {
+            display: flex;
+            justify-content: space-between;
+            
+            .section_card {
+                width: 32%;
+                background-color: $sectionCardBckgrndColor;
+                color: white;
+                padding: 15px;
+                border-radius: 5px;
+                text-align: center;
+                font-family: $paragraphFontFamily;
+
+                .section_card_img {
+                    width: 100%;
+                    border-radius: 5px;
+                }
+
+                .section_card_heading {
+                    margin-top: 10px;
+                    margin-bottom: 10px;
+                    font-size: 25px;
+                    font-family: 'Source Sans Pro', sans-serif;
+                    position: relative;
+                    z-index: 1;
+
+                    &::after {
+                        content: "";
+                        background-color: $underLineTextColor;
+                        display: block;
+                        height: 12px;
+                        width: 55%;
+                        z-index: -1;
+                        position: absolute;
+                        bottom: 0px;
+                        left: 23%;
+                    }
+                }
+
+                .section_card_text {
+                    color: rgb(196, 193, 193);
+                    line-height: 150%;
+                }
+            }
+        }
+
+        .section_banner {
+            background: $linearGradient;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            border-radius: 5px;
+            width: 70%;
+            height: 19vh;
+            font-family: $paragraphFontFamily;
+            position: absolute;
+            top: 191%;
+            left: 15%;
+            z-index: 1;
+
+            .section_banner_heading {
+                font-size: 25px;
+                font-family: 'Source Sans Pro', sans-serif;
+                font-weight: bold;
+                margin: 0;
+                position: relative;
+                z-index: 1;
+
+                &::after {
+                    content: "";
+                    background-color: $underLineTextColor;
+                    display: block;
+                    height: 12px;
+                    width: 15%;
+                    z-index: -1;
+                    position: absolute;
+                    bottom: 0px;
+                    left: 30%;
+                }
+            }
+
+            .section_banner_text {
+                color: rgb(196, 193, 193);
+            }
+
+            .section_banner_button {
+                @include buttonJoinUs;
+            }
+        }
+    }
+
+    .footer {
+        padding-left: map-get($paddingLeftRight, "min");
+        padding-right: map-get($paddingLeftRight, "min");
+        height: map-get($sectionHeight, "minimum");
+        background-color: $sectionCardBckgrndColor;
+        color: rgb(196, 193, 193);
+        font-family: $paragraphFontFamily;
+        position: relative;
+
+        .footer-wrap {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 110px;
+
+            .footer_logo {
+                @include logo;
+            }
+
+            .footer_text {
+                width: 310px;
+            }
+        }
+    }
+}
