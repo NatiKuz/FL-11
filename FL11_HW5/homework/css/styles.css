@@ -1,0 +1,320 @@
+/*
+ * Feel free to change name of colors if you need it
+ * Feel free to add new colors if you need it
+ */
+/* :root {
+  --bg-color--dark: #0b192f;
+  --bg-color--header: #162b4d;
+  --link: #fff;
+  --link--hover: #b8b8b8;
+  --bg-footer-color: #162b4d;
+} */
+
+body {
+  font-family: roboto;
+}
+.post-desc1 {
+	background: #B71757;
+}
+.post-desc2 {
+	background: #0D7E71;
+}
+.post-desc3 {
+	background: #b1660e;
+}
+.post-desc4 {
+	background: #d12767;
+}
+.post-desc5 {
+	background: #2d95bb;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  padding: 0 10%;
+  background-color: #0b192f;
+  font-weight: 300;
+  font-size: 100%;
+  line-height: 150%;
+}
+
+header {
+  display: flex;  
+  justify-content: space-between;
+  background-color: #162b4d;
+}
+
+h1 {
+  margin-left: 20px;
+  color: #fff;
+  font-weight: 200;
+}
+
+h1 span {
+  color: #d12767;
+}
+
+nav {
+  width: 40%;
+  padding-right: 40px;
+  display: flex;
+  justify-content: space-around;
+}
+
+nav div {
+  flex: 1;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 200;
+}
+
+nav div:hover {
+  cursor: pointer;
+  background-color: #b8b8b8;
+}
+
+.blog-stories {
+  margin: 15px 0;
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+aside {
+  flex: 2;
+}
+
+.news-in-blog {
+  background-color: #fff;
+  margin-bottom: 15px;
+}
+
+.news-in-blog img {
+  width: 100%;
+}
+
+.news-articl {
+  padding: 15%;
+}
+
+h3 {
+  margin: 0;
+  font-size: 200%;
+  font-weight: 300;
+  line-height: 100%;
+}
+
+.news-in-blog p {
+  color: #b8b8b8;
+}
+
+main {
+  flex: 7;
+}
+
+.blog-posts {
+  margin-right: 15px;
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.post {
+  display: flex;
+  color: #b8b8b8;
+} 
+
+.post:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+ .post .date-img img {
+  flex: 1;
+  width: 100%;
+  height: 100%;
+}
+
+.post div.date-img {
+  flex: 1;  
+}
+
+.post div.date-img:hover, .post div.post-desc:hover {
+  cursor: pointer;
+  filter: opacity(75%);
+}
+
+h2 {
+  margin-bottom: 0;
+  color: #fff;
+  font-size: 295%;
+  font-weight: 200;
+  line-height: 100%;
+}
+
+.post .post-desc {
+  flex: 1;
+  display: flex;
+  padding-bottom: 5%;
+}
+
+.post:nth-child(odd)  .post-desc {
+  flex-direction: row-reverse;
+}
+
+.date-img {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.date {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding: 0 3%;
+  font-weight: 100;
+}
+
+.day {
+  margin-top: 2rem;
+  font-size: 300%; 
+}
+
+.month {
+  margin-top: 1.5rem;
+  font-size: 150%;
+}
+
+.articl {
+  flex: 1 1 auto;
+}
+
+.post:nth-child(odd) .post-desc .articl {
+  padding-left: 10%;
+}
+
+.post:first-child .post-desc .articl {
+  padding-left: 5%;
+}
+
+.post:nth-child(even) .post-desc .articl {
+  text-align: right;
+  padding-right: 10%;
+}
+
+footer {
+  padding: 2% 3%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; 
+  background-color: #162b4d;
+  color: #b8b8b8;
+}
+
+.footer-1 p {
+  margin: 0;
+}
+
+.footer-2 p {
+  width: 140px;
+}
+
+@media screen and (max-width: 768px) {
+
+  body {
+    padding: 0;
+  }
+
+  header {
+    padding-top: 2%;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  header::before {
+    content: "\2630";
+    color: #fff;
+    font-weight: 100;
+  }
+
+  h1 {
+    margin: 7% 0;
+  }
+
+  nav {
+    display: none;
+  }
+
+  main {
+    flex: 3;
+  }
+
+  .post .date-img{
+    line-height: normal;
+    font-size: 0;
+  }
+
+  .post {
+    flex-direction: column;
+  }
+
+  .post:nth-child(even) {
+    flex-direction: column;
+  }
+
+  .post:nth-child(n) .post-desc {
+    flex-direction: column-reverse;
+  }
+
+  .post:nth-child(n) .post-desc .articl {
+    padding-left: 10%;
+    padding-right: 10%;
+    text-align: left;
+  }
+
+  .date {
+    align-items: center;
+    margin-bottom: 5%;
+  }
+
+  footer {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  footer p {
+    margin: 0;
+  }
+}
+
+@media screen and (max-width: 480px) {
+
+  .blog-stories {
+    flex-direction: column-reverse;
+  }
+
+  .blog-posts {
+    margin-right: 0;
+  }
+
+  .date {
+    margin: 5% 0 0 0;
+  }
+
+  .news-articl {
+    padding: 10%;
+  }
+}
