@@ -7,7 +7,7 @@ if (isNaN(a) || a <= 0 || isNaN(b) || b <= 0 || isNaN(c) || c <= 0) {
     message = 'Invalid input data';
 } else {
 
-    if (a > b + c || b > a + c || c > a + b) {
+    if (a >= b + c || b >= a + c || c >= a + b) {
         message = 'Triangle doesn\'t exist';
     } else {
         
