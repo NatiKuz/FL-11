@@ -2,8 +2,6 @@ const userEmail = 'user@gmail.com';
 const adminEmail = 'admin@gmail.com';
 const userPassword = 'UserPass';
 const adminPassword = 'AdminPass';
-const userNewPassword = 'UserNewPass';
-const adminNewPassword = 'AdminNewPass';
 const minEmailLength = 6;
 const minPasswordLength = 5;
 let message;
@@ -34,8 +32,7 @@ if (!enterEmail) {
                 if (!enterOldPassword) {
                     message = 'Canceled!';
 
-                } else if (enterEmail === userEmail && enterOldPassword === userPassword 
-                    || enterEmail === adminEmail && enterOldPassword === adminPassword) {
+                } else if (enterOldPassword === password) {
                     let enterNewPassword = prompt('Please, enter your new password.');
 
                     if (!enterNewPassword) {
@@ -44,8 +41,7 @@ if (!enterEmail) {
                     } else if (enterNewPassword.length < minPasswordLength) {
                         message = 'It\'s too short password. Sorry.';
 
-                    } else if (enterEmail === userEmail && enterNewPassword === userNewPassword 
-                        || enterEmail === adminEmail && enterNewPassword === adminNewPassword) {
+                    } else {
                         let newPasswordVerification = prompt('Please, confirm your new password.');
 
                         if (newPasswordVerification === enterNewPassword) {
@@ -55,17 +51,14 @@ if (!enterEmail) {
                         } else {
                             message = 'You wrote the wrong password.';
                         }
-
-                    } else {
-                        message = 'I don\'t know you too!';
-                    }       
+                    } 
+                } else {
+                    message = 'Wrong password!';
                 }
             } 
-
         } else {
             message = 'Wrong password!';
         }
-
     } else {
         message = 'I don\'t know you!';
     }

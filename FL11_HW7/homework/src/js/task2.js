@@ -28,12 +28,10 @@ Possible prize on current attempt: ${currentPrize}$`;
 
             let strUserName = prompt(messagePrompt, '0');
 
-            let enterUserNumber;
+            let enterUserNumber = -1;
 
-            // if User press cancel or Esc
-            if (strUserName === null) {
-                enterUserNumber = -1;
-            } else {
+            // User don'n press Cancel or Esc and strUserName is not empty
+            if (strUserName) {
                 enterUserNumber = parseInt(strUserName);
             } 
 
