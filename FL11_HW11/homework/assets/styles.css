@@ -53,12 +53,17 @@ hr {
     margin-top: 20px;
 }
 
-.cat-list {
-    margin-left: 5px;
-}
-
 tbody {
     width: 100%;
+}
+
+tr {
+    display: flex;
+}
+
+.delete-item {
+    position: fixed;
+    left: 92%;
 }
 
 .material-icons {
@@ -66,9 +71,8 @@ tbody {
 }
 
 .middle-column {
-    width: 100%;
     font-size: 16px;
-    color: rgb(0, 183, 255);
+    color: rgb(0, 183, 255); 
 }
 
 a:hover {

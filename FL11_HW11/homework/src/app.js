@@ -44,7 +44,7 @@ const addItem = document.getElementById('add');
 
 input.addEventListener('input', function(event) {
     const $target = event.target;
-    
+
     if ($target.value.length) {
         aAdd.removeAttribute('disabled');
     } else {
@@ -85,13 +85,23 @@ function addRow(text) {
     td2.textContent = text;
 
     const td3 = document.createElement('td');
+    const editChanges = createMaterialIcons(iconEditChange);
+    td3.appendChild(editChanges);
+
+    editChanges.addEventListener('click', function(event) {
+        event.target.textContent = iconSaveChange;
+    });
+
+    const td4 = document.createElement('td');
     const deleteItem = createMaterialIcons(iconDelete);
+    td4.className = 'delete-item';
     deleteItem.setAttribute('onclick', `removeElement(${currentRowNumber})`);
-    td3.appendChild(deleteItem);
+    td4.appendChild(deleteItem);
 
     tr.appendChild(td1);
     tr.appendChild(td2);
     tr.appendChild(td3);
+    tr.appendChild(td4);
 
     return tr;
 }
