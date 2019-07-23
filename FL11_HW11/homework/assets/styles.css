@@ -1,0 +1,76 @@
+#root {
+    height: 100vh;
+}
+
+.wrapper {
+    margin-left: 10px;
+    margin-right: 30px;
+    height: 100%;
+}
+
+h1 {
+    font-size: 2em;
+    font-weight: bolder;
+    color: rgb(0, 183, 255);
+    display: flex;
+    justify-content: center;
+}
+
+h6 {
+    display: none;
+}
+
+h6.notification {
+    color: red;
+    display: block;
+}
+
+.add-action {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+input {
+    border: 1px solid lightgray;
+    width: 92%;
+    height: 40px;
+}
+
+input::placeholder {
+    padding-left: 10px;
+}
+
+.add[disabled] i {
+    color: lightgrey;
+    width: 30px;
+    height: 30px;
+}
+
+hr {
+    border: 2px solid rgb(200, 237, 252);
+    width: 100%;
+    margin-top: 20px;
+}
+
+.cat-list {
+    margin-left: 5px;
+}
+
+tbody {
+    width: 100%;
+}
+
+.material-icons {
+    color: lightblue;
+}
+
+.middle-column {
+    width: 100%;
+    font-size: 16px;
+    color: rgb(0, 183, 255);
+}
+
+a:hover {
+    cursor: pointer;
+}
