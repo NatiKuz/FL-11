@@ -1,0 +1,60 @@
+@import "variables.less";
+
+* {
+    box-sizing: border-box;
+}
+
+h1, h3 {
+    color: @colorBlue;
+}
+
+main div.container hr {
+    border: 1px solid @colorBlue;
+}
+
+.bg-red {
+    background-color: @colorRed;
+    border-color: @colorRed;
+}
+
+.bg-blue {
+    background-color: @colorBlue;
+    border-color: @colorBlue;
+}
+
+.bg-orange {
+    background-color: @colorOrange;
+    border-color: @colorOrange;
+}
+
+.bg-green {
+    background-color: @colorGreen;
+    border-color: @colorGreen;
+}
+
+footer div.container .footer {
+    background-color: @colorGrey;
+}
+
+nav {
+    height: 51px;
+}
+
+.nav-link {
+    height: 50px;
+    line-height: 2.2;
+}
+
+.navbar-toggler {
+    display: none;
+}
+
+@media (max-width: 767.98px) {  
+    .navbar-toggler {
+        display: block;
+    }
+
+    .nav-item-link {
+        display: none;
+    }    
+}
