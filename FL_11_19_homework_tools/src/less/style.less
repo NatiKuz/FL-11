@@ -1,0 +1,44 @@
+// @import 'variables.less';
+
+#root {
+//   font-family: 'Mukta', sans-serif;
+  width: 80%;
+//   background-image: linear-gradient(to bottom, @pink, @light-pink);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+
+  h1 {
+    margin-bottom: 10px;
+  }
+
+  h3 {
+    margin: 5px;
+  }
+
+  .game-rules {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5px;
+
+    li {
+      margin-left: 20px;
+      text-align: left;
+    }
+  }
+
+  #game-result {
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+
+    .images {
+      height: 280px;
+      max-width: 100%;
+      object-fit: contain;
+    }
+  }
+}
