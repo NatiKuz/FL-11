@@ -1,0 +1,39 @@
+<div class="create-news">
+	<h1>Create News</h1>
+	<div class="container">
+		<div>
+			<label>
+				Heading
+				<input type="text" name="heading" [(ngModel)]="news.title" />
+			</label>
+			<label>
+				Short description
+				<input type="text" name="description" [(ngModel)]="news.descShort"/>
+			</label>
+			<label>
+				Content
+				<textarea [(ngModel)]="news.descFull"></textarea>
+			</label>
+		</div>
+		<div>
+			<label>
+				Date
+				<input type="text" name="date" [(ngModel)]="news.date"/>
+			</label>
+			<label>
+				Author
+				<input type="text" name="author" [(ngModel)]="news.author"/>
+			</label>
+			<label>
+				Source URL
+				<input type="text" name="sourceUrl" [(ngModel)]="news.sourceUrl"/>
+			</label>
+			<div>
+				<button (click)="save()">Save</button>
+				<button (click)="goToNewslinesLink()">Cancel</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<router-outlet></router-outlet>
