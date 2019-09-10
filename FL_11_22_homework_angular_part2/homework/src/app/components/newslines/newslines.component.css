@@ -1,0 +1,63 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1 {
+  text-align: center;
+  border: 1px solid gray;
+  background-color: lightgrey;
+  margin: 0;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 2px solid gray;
+  height: 40px;
+  padding: 0px 10px;
+}
+
+select, input {
+  border: 1px solid grey;
+  border-radius: 3px;
+}
+
+button {
+  background-color: lightgrey;
+  border: 1px solid grey;
+  border-radius: 3px;
+  margin-left: 2px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: lightslategray;
+  color: wheat;
+}
+
+.article {
+  display: flex;
+  border: 2px solid gray;
+  margin: 20px;
+  height: 150px;
+  width: auto;
+}
+
+.photocard {
+  border: 2px solid gray;
+  width: 100px;
+  height: 100px;
+  margin: 25px 35px 0px 25px;
+}
+
+.description {
+  width: 400px;
+  margin: 25px 25px 0px 0px;
+}
+
+.date {
+  margin: 25px;
+}
