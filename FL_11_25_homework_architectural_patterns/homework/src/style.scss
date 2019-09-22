@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+$turqoise: #26a69a;
+$red: #E57373;
+$gray: #f8f8f8;
+$white: #fff;
+
+$shadow:
+    0 2px 2px 0 rgba(0, 0, 0, 0.14),
+    0 3px 1px -2px rgba(0, 0, 0, 0.12),
+    0 1px 5px 0 rgba(0, 0, 0, 0.2);
+
+.root {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.search-block {
+    text-align: center;
+    font-weight: bold;
+
+    input {
+        margin: 0px 20px;
+        border-color: transparent;
+        border-bottom: 1px solid black;
+    }
+}
+
+table {
+    border-spacing: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    tr:first-child {
+        background-color: $turqoise;
+
+        th {
+            text-align: start;
+            padding: 0px 10px;
+            height: 70px;
+        }
+    }
+
+    tr:nth-child(even) {
+        background-color: $gray;
+    }
+        
+    img {
+        margin: 20px;
+    }
+
+    .remove-user {
+        background-color: $red;
+        box-shadow: $shadow;
+        height: 25px;
+        border-color: $red;
+        color: $white;
+        cursor: pointer;
+    }
+}
+
+.footer {
+    margin-top: 100px;
+    border-top: 2px solid $gray;
+
+    #load-more {
+        background-color: $gray;
+        box-shadow: $shadow;
+        width: 400px;
+        height: 40px;
+        border-radius: 25px 25px 25px 25px;
+        font-weight: bold;
+        cursor: pointer;
+    }
+}
