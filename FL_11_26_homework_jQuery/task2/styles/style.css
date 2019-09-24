@@ -33,3 +33,10 @@
   top: 0;
   height: 21px;
 }
+
+.item-status {
+  position: absolute;
+  right: -90px;
+  top: 0;
+  height: 21px;
+}
